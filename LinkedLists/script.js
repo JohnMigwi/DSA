@@ -33,14 +33,13 @@ function Node( value , next , prev ) {
 
 //add node to tail
    //create the node
-   LinkedList.prototype.addToTail = function(value){
-        var Node2 = new Node ( value , null , this.tail)
-        //what if other nodes were present
-        if(this.tail) this.tail.next = Node2 ;
-        //if empty
-        else this.head = Node2;
-        this.tail=Node2;
-   }
+    LinkedList.prototype.addToTail = function ( value){
+        var newNode = new Node(value , null , this.tail);
+        if(this.tail) this.tail.next= newNode;
+        else this.head= newNode;
+        this.tail= newNode;
+    }
+    
    var LL1 = new LinkedList();
    LL1.addToTail(200);
    LL1.addToTail(700);
