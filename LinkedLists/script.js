@@ -22,6 +22,13 @@ function Node( value , next , prev ) {
     this.head = Node1;
 }
 
+//remove node from the head 
+   //point the head  remember the head is this .head
+    LinkedList.prototype.removeHead(obj){
+        
+    }
+   //assign it to next node
+
 
     var LL = new LinkedList();
     LL.addToHead(100);
@@ -29,7 +36,7 @@ function Node( value , next , prev ) {
     LL.addToHead(700);
     LL.addToHead(2900);
     LL.addToHead(8200);
-    console.log(LL) 
+   // console.log(LL) 
 
 //add node to tail
    //create the node
@@ -39,11 +46,14 @@ function Node( value , next , prev ) {
         else this.head= newNode;
         this.tail= newNode;
     }
-    
+
    var LL1 = new LinkedList();
-   LL1.addToTail(200);
-   LL1.addToTail(700);
-   LL1.addToTail(100);
-   LL1.addToTail(2900);
-   LL1.addToTail(8200);
-   console.log(LL1) 
+   LL1.addToTail(10);
+   LL1.addToTail(20);
+   LL1.addToTail(30);
+
+   LL1.addToHead(100);
+   //console.log(LL1.tail.prev.prev.prev);
+
+
+
