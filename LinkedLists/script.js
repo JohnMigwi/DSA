@@ -54,6 +54,7 @@ function Node( value , next , prev ) {
 
    LL1.addToHead(100);
    //console.log(LL1.tail.prev.prev.prev);
-
+ //remove from head
+ //remove from tail
 
 
