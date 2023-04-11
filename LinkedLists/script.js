@@ -23,11 +23,19 @@ function Node( value , next , prev ) {
 }
 
 //remove node from the head 
-   //point the head  remember the head is this .head
-    LinkedList.prototype.removeHead(obj){
-        
-    }
-   //assign it to next node
+   LinkedList.prototype.removeHead = function () {
+    //if list is empty
+     if(!this.head) return null;
+    //if list not empty
+    var val = this.head.value;
+    this.head = this.head.next;
+    
+    //new head node can now be itself or null
+     if(this.head) this.head.prev = null;
+     else this.tail = null;
+
+     return val;
+   }
 
 
     var LL = new LinkedList();
@@ -55,6 +63,21 @@ function Node( value , next , prev ) {
    LL1.addToHead(100);
    //console.log(LL1.tail.prev.prev.prev);
  //remove from head
- //remove from tail
 
+ //remove from tail
+LinkedList.prototype.removeTail = function () {
+    //empty
+    if(!this.tail) return null;
+
+    //not empty
+    var val = this.tail.value;
+    this.tail= this.tail.prev;
+    //remaining node
+    if (this.tail) this.tail.next = null;
+    else this.head = null;
+
+    //get back the value 
+     
+    return val;
+}
 
